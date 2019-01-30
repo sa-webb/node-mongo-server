@@ -6,8 +6,8 @@ const mongoose = require('mongoose');
 const product = require('./routes/product.route'); 
 const app = express();
 
-// Insert db pass here 
-let dev_db_url = 'mongodb://someuser:usersome1@ds161144.mlab.com:61144/productstutorial';
+// Insert db path here 
+let dev_db_url = 'mongodb://';
 
 const mongoDB = process.env.MONGODB_URI || dev_db_url;
 mongoose.connect(mongoDB);
