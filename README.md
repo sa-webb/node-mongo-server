@@ -1,5 +1,10 @@
 # Node Server for performing CRUD operations into MongoDB
 
+## Install 
+1. clone 
+2. 'npm install'
+3. 'node app.js'
+
 ### GET ONE
 `http://localhost:5000/products/_id`
 
