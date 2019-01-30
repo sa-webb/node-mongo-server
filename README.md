@@ -1,16 +1,16 @@
-# CRUD Node App
+# Node Server for performing CRUD operations into MongoDB
 
-## Apis
-Using Postman 
+### GET ONE
+`http://localhost:5000/products/_id`
 
-GET ALL
-http://localhost:5000/products/
+### GET ALL
+`http://localhost:5000/products/`
 
-GET ONE
-http://localhost:5000/products/_id
+### CREATE 
+`http://localhost:5000/products/create`
 
-CREATE http://localhost:5000/products/create
+### UPDATE 
+`http://localhost:5000/products/_id/update`
 
-UPDATE http://localhost:5000/products/_id/update 
-
-DELETE http://localhost:5000/products/_id/delete
+### DELETE 
+`http://localhost:5000/products/_id/delete`
