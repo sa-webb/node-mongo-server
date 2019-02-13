@@ -10,7 +10,12 @@ const app = express();
 let dev_db_url = 'mongodb://someuser:usersome1@ds161144.mlab.com:61144/productstutorial';
 
 const mongoDB = process.env.MONGODB_URI || dev_db_url;
-mongoose.connect(mongoDB);
+const config = {
+    autoIndex: false,
+    useNewUrlParser: true,
+  };
+
+mongoose.connect(mongoDB, config);
 mongoose.Promise = global.Promise;
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
