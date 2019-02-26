@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+var cors = require('cors')
 
 // Require the controllers WHICH WE DID NOT CREATE YET!!
 const product_controller = require('../controllers/product.controller');
@@ -21,7 +22,7 @@ const Products = require('../models/product.model');
 
 router.get('/', async (req, res) => {
   const products = await Products.find({});
-  res.json( { products } );
+  res.json( products );
 });
 
 module.exports = router;
