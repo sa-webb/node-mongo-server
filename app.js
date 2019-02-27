@@ -5,8 +5,8 @@ const product = require('./routes/product.route');
 const cors = require('cors');
 const app = express();
 
-// Insert db credentials below  
-let dev_db_url = 'mongodb://someuser:usersome1@ds161144.mlab.com:61144/productstutorial';
+// Insert db path here 
+let dev_db_url = 'mongodb://';
 
 const mongoDB = process.env.MONGODB_URI || dev_db_url;
 const config = {
