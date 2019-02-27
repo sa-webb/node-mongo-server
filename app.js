@@ -6,7 +6,7 @@ const cors = require('cors');
 const app = express();
 
 // Insert db path here 
-let dev_db_url = 'mongodb://';
+let dev_db_url = '';
 
 const mongoDB = process.env.MONGODB_URI || dev_db_url;
 const config = {
@@ -19,7 +19,7 @@ mongoose.Promise = global.Promise;
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-
+// Enable CORS
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
