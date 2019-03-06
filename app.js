@@ -7,10 +7,10 @@ const product = require('./routes/product.route');
 const app = express();
 
 // Insert db path here 
-let dev_db_url = 'mongodb://';
+let dev_db_url = 'mongodb://someuser:usersome1@ds161144.mlab.com:61144/productstutorial';
 
 const mongoDB = process.env.MONGODB_URI || dev_db_url;
-mongoose.connect(mongoDB);
+mongoose.connect(mongoDB, { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
